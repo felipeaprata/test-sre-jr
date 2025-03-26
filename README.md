@@ -67,10 +67,12 @@ Este repositório contém três desafios práticos para avaliar competências t�
   - Caso o uso esteja acima de **80%**, registre um alerta em um arquivo `disk_alert.log`.  
   - Caso o uso esteja abaixo de **80%**, registre uma mensagem informando que o disco está com espaço suficiente.  
 
-# Desafio 4: Pipeline Declarativa no Jenkins para CI/CD
+---
+
+## Desafio 4: Pipeline Declarativa no Jenkins para CI/CD
 
 ### Tarefa  
-Crie um **Jenkinsfile** que implemente uma pipeline **CI/CD** contendo os seguintes estágios:  
+Crie um **Jenkinsfile** que implemente um **CI/CD** contendo os seguintes estágios:  
 
 1. **Checkout**
 2. **Build**
@@ -81,8 +83,48 @@ Crie um **Jenkinsfile** que implemente uma pipeline **CI/CD** contendo os seguin
    - Se for ambiente **não produção**, faça o deploy;
    - Se for **produção**, solicite uma autorização.
 
-## Requisitos  
+## Requisitos
+- A app simples deve ser em Node.js
 - Utilize pipelines declarativas
 - Explique no próprio jenkinsfile caso você entenda que o time de SRE terá alguma dificuldade de entender pontos específicos
 - Utilize variáveis de ambiente
 
+---
+
+## Desafio 5: Dockerfile e Docker Compose  
+
+### Tarefa  
+Crie um **Dockerfile** e um **docker-compose.yml** para uma aplicação simples em Node.js.
+
+## Requisitos
+1. **Dockerfile:**
+   - Criar uma imagem baseada em **Alpine Linux**.
+   - Instalar as dependências
+   - Expor a porta necessária para rodar
+
+2. **docker-compose.yml:**
+   - Criar um serviço para a aplicação.
+   - Criar um serviço de banco de dados **MySQL**
+   - Configurar variáveis de ambiente para conexão ao banco de dados
+
+3. **Execução:**
+   - A aplicação deve ser iniciada corretamente com `docker-compose up -d`.
+
+---
+
+## Desafio 6: IaC AWS com Terraform  
+
+### Tarefa  
+Crie um projeto no Terraform que provisione a seguinte infraestrutura **AWS**
+
+1. **Instância EC2**  
+   - SO: **Amazon Linux 2**.  
+   - Instalar e configurar um **nginx** para servir uma página estática com a mensagem `"Eu quero ser um Printer"`.
+   - Expor a porta **80** para acesso público.
+
+2. **Application Load Balancer (ALB)**  
+   - Criar um **ALB** direcionando tráfego para a instância EC2
+
+3. **Registro no Route 53**
+   - Criar um domínio e registro fazendo apontamento para o ALB
+   - O domínio pode ser simulado, sem necessidade de um domínio real
