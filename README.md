@@ -67,6 +67,22 @@ Este repositório contém três desafios práticos para avaliar competências t�
   - Caso o uso esteja acima de **80%**, registre um alerta em um arquivo `disk_alert.log`.  
   - Caso o uso esteja abaixo de **80%**, registre uma mensagem informando que o disco está com espaço suficiente.  
 
-### Entrega  
-- Suba o script `disk_usage_alert.sh` no GitHub.
-- Adicione um arquivo `README.md` explicando o script e mostrando um exemplo de saída do log.
+# Desafio 4: Pipeline Declarativa no Jenkins para CI/CD
+
+### Tarefa  
+Crie um **Jenkinsfile** que implemente uma pipeline **CI/CD** contendo os seguintes estágios:  
+
+1. **Checkout**
+2. **Build**
+3. **Test**
+4. **Code Quality**
+5. **Package(empacotamento do artefato)**
+6. **Deploy(um deploy simples em docker)**
+   - Se for ambiente **não produção**, faça o deploy;
+   - Se for **produção**, solicite uma autorização.
+
+## Requisitos  
+- Utilize pipelines declarativas
+- Explique no próprio jenkinsfile caso você entenda que o time de SRE terá alguma dificuldade de entender pontos específicos
+- Utilize variáveis de ambiente
+
