@@ -25,10 +25,6 @@ Parabéns, você está fazendo parte de um teste para concorrer a uma vaga de SR
 
 # Questões práticas
 
-# Desafios Práticos de Linux para SRE Júnior
-
-Este repositório contém três desafios práticos para avaliar competências técnicas em **Linux**.
-
 ---
 
 ## Desafio 1: Gerenciamento de Processos e Logs
