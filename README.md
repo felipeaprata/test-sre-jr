@@ -5,6 +5,7 @@ Parabéns, você está fazendo parte de um teste para concorrer a uma vaga de SR
 - Você terá até 24 horas para entregar o teste
 - Terá que criar um repositório público no github e nos enviar apenas o link com o teste concluído para o email devops@printi.com.br
 - Resolva os desafios criando os scripts mencionados
+- Explique em comentarios ou no seu repo, se precisar, sua lógica ou os motivos de seguir caminhos específicos
 - Boa sorte
 
 # Questões teóricas
