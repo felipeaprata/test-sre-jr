@@ -1,0 +1,48 @@
+1.	Informe os comandos relacionados a procesos no linux que já utilizou na prática e o porque de cada um deles
+R: Já utilizei comandos como htop. Foi necessário utiliza-lo para entender como o ambiente estava se comportando e quais serviços estava rodando.
+
+2.	Explique o significado completo da seguinte saída do comando ls -l (-rwxr-x--- 1 devops users 1024 Mar 25 12:00 script.sh)
+R: Significa que o arquivo “script.sh” pertence ao usuário devops e do grupo users, e as permissões que ele tem é “rwx” acesso total para o usuário devops, “r-x” acesso de leitura e e execução para o grupo users, e que qualquer usuário ou grupo fora do “devops” e “users”, não tem permissão nenhuma.
+
+3.	Quais comandos você utiliza para avaliar possíveis problemas em cpu,memória,disco,rede em sistemas operacionais Linux
+R: Para cpu e memoria pode-se utilizar o htop. Disco df -h e rede netln
+
+4.	Explique a diferença entre topologia física e topologia lógica de uma rede. Dê um exemplo de cada uma.
+R: Física seria os dispositivos “reais” como cabos, roteadores. Lógico acredito que seja os dados que trafegam
+
+5.	Quais são as principais características das topologias de rede estrela, anel e malha? Cite vantagens e desvantagens de cada uma.
+R: Estrela são focados em um ponto central, se um cabo der problema apenas aquele dispositivo irá ter problema mas se o ponto central, no caso o hub, aí todos os dispositivos iram falhar.
+  Anel seria os dispositivos conectados uma ao outro formando um círculo, a vantagem é que não haverá sobrecarga em um ponto, a desvantagem é que se um cabo falhar, para tudo.
+  Malha é como se fosse uma teia, aonde cada dispositivo está conectado a vários, então se uma conexão falhar, o dispositivo ainda estará funcionando, mas o problema é que exige muitos cabos e portas para essa conexão.
+
+6.	Por que a topologia em malha é frequentemente utilizada em ambientes críticos, como data centers e infraestrutura de nuvem? Como ela contribui para a resiliência da rede?
+R: Porque a Malha garante alta resiliência, desempenho e tolerância a falhas. 
+
+7.	Explique a diferença entre EC2, S3 e RDS na AWS. Para que tipo de aplicação cada um é mais adequado?
+R: EC2 são máquinas virtuais aonde se configura o sistema operacional, Cpu, storage. S3 é um serviço de armazenamento de objetos ou arquivos. E o RDS é o serviço de banco de dados, aonde se pode configurar banco de dados como Mysql, Postgres.
+
+8.	O que é um Auto Scaling Group (ASG) e como ele funciona em conjunto com um Load Balancer (ELB) para melhorar a disponibilidade de uma aplicação?
+R: ASG é um serviço que automatiza o processo de provisionamento de instancias. O ELB faz a distribuição das requisições para as instancias assim não sobrecarregando uma.
+
+9.	O que são IAM Roles e IAM Policies na AWS? Qual a diferença entre uma policy gerenciada pela AWS e uma policy personalizada (custom policy)?
+R: IAM Roles são funções com permissões para serem configurados em serviços da AWS. IAM Policies são as permissões que se coloque em um usuário, grupo ou role. Policy gerenciada pela AWS são permissões pré-prontas feitas pela AWS e que não podem ser alteradas/modificadas, já as Custom policy, você pode customizar a permissão da maneira que achar melhor.
+
+10.	O que é o shebang (#!) em um script shell? Dê um exemplo de como ele deve ser usado em um script Bash.
+R: Shebang é os caracteres usados na primeira linha de um script shell. Exemplo: #!/bin/bash
+
+11.	Explique a diferença entre os comandos if, case e while em um script shell. Dê um exemplo prático de uso para cada um.
+R: If é usado para quando você precisa de condição no código. EX: if [ $num -gt 0]. Case tem uma função parecida com a do If mas você consegue comparar mais variáveis. EX: case $num in. While serve como uma estrutura de repetição que irá finalizar quando a condição for false. EX: while [$num -le 5]
+
+12.	Qual a diferença entre 1,@ e $# em um Shell Script? Dê um exemplo de um script que utilize essas variáveis para manipular argumentos passados na linha de comando.
+R: $1 seria a primeira informação passada na linha de comando. $@ são todas as informações passada na linha de comando. $# representa a quantidade de informações que foi passada. EX:
+#!/bin/bash
+Echo ”Numero de argumentos: $#”
+Echo “Primeiro argumento: $1”
+Echo “$@”
+
+13.	Explique como você faria um dump de um banco de dados Mysql e quais informações precisaria para isso.
+R: Criaria um scritp em uma intancia que iria conectar no Mysql e depois enviar o dump para o S3. Para isso, precisa dos logins de acesso do banco, endpoint, porta.
+
+14.	Explique como faria o controle de acesso em um banco de dados Mysql e quais informações precisaria para essa demanda.
+R: Olhando para AWS, faria as alterações necessárias no usuário no IAM. Olhando para o banco, usaria o comando Grant.
+
