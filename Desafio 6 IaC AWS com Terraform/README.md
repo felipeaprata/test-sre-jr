@@ -125,7 +125,7 @@ data "aws_ami" "amazon_linux" {
   }
 }
 ```
-### Configração da EC2. Usamos a AMI encontrada anteriormente, o tipo da instancia declarado no começo, SG e Subnets criadas, e o User data que atualiza, instala o Nginx, coloca a frase "Eu quero ser um Printer" no index, inicia e habilita o nginx.
+### Configuração da EC2. Usamos a AMI encontrada anteriormente, o tipo da instancia declarado no começo, SG e Subnets criadas, e o User data que atualiza, instala o Nginx, coloca a frase "Eu quero ser um Printer" no index, inicia e habilita o nginx.
 ```bash
 resource "aws_instance" "web" {
   ami           = data.aws_ami.amazon_linux.id
