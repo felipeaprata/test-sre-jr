@@ -2,7 +2,7 @@
 
 ## Explicando o arquivo Dockerfile
 
-### Utiliza-se da imagem Alpine aonde é uma versão do Node.js
+### Utiliza-se da imagem Alpine aonde é uma versão mais lite do Node.js
 ```bash
 FROM node:alpine
 ```
@@ -30,7 +30,7 @@ CMD ["npm", "start"]
 ## Explicando o arquivo Docker Compose
 
 ### No "service" é aonde definimos os serviços, no caso app e mysql
-### App
+## App
 ### A imagem desse serviço será construida a partir de um Dockerfile que está no diretório atual
 ```bash
 build: .
@@ -53,7 +53,7 @@ environment:
     depends_on:
       - mysql
 ```
-### Mysql
+## Mysql
 ### Utilizamos a imagem 8.0 do Mysql
 ```bash
     image: mysql:8.0
