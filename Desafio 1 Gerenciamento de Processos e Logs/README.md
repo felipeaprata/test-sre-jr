@@ -1,6 +1,6 @@
-Script Bash que lista os 5 processos que mais consomen CPU e os 5 que mais consomem memória
+# Script Bash que lista os 5 processos que mais consomen CPU e os 5 que mais consomem memória
 
-Explicando o Script:
+## Explicando o Script:
 
 Primeiro foi criado a variável LOG_FiLE para que não haja necessidade de colocar "process_monitor.log" o tempo todo
 LOG_FILE="process_monitor.log"
@@ -19,8 +19,7 @@ Por últimos, mesma coisa que no CPU mas agora para buscar os 5 processos que ma
 echo "Top 5 Memória:" >> $LOG_FILE
 ps aux --sort=-%mem | head -n 5 >> $LOG_FILE
 
-
-Configuração da Cron
+## Configuração da Cron
 
 Abrimos o arquivo do cron:
 crontab -e
